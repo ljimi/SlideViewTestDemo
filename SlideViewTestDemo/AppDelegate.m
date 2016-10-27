@@ -2,12 +2,12 @@
 //  AppDelegate.m
 //  SlideViewTestDemo
 //
-//  Created by 孙春磊 on 2016/10/27.
+//  Created by mxl on 2016/10/27.
 //  Copyright © 2016年 mxl. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    ViewController *vc = [[ViewController alloc] init];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
